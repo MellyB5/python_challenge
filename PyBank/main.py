@@ -1,7 +1,7 @@
 import os
 import csv
- 
-csvpath = os.path.join ("Resources", "budget_data.csv")
+
+csvpath = os.path.join("Resources", "budget_data.csv")
 
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -31,3 +31,6 @@ for row in open(csvpath):
 
 
 # find the min
+
+
+# print to txt file
