@@ -21,25 +21,6 @@ with open(csvpath) as csvfile:
     print(f"Total months: {num_rows}")
     print(f"Total: ${net_total}")
 
-    # for row in csvreader:
-    #     pf.append(int(row[1])-int(row[1]-1)
-    # print(pf)
-
-    # lines = csvreader.readlines()
-    # output = [0]
-    # header = lines[0]
-    # data = [int(number)] for number in lines[1:]]
-    # for index, number in enumerate(data[1:],1):
-    #     output.append(number-data[index-1])
-    # print(output)
-
-
-
-# find the net proft/loss
-# sum_pf = 0
-# for row in open(csvpath):
-#     sum_pf += int(row[1])
-# print(f"Total: $, {sum_pf}")
 
 # # find the average, create a list of changes
 # change_list = []
