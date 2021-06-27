@@ -24,4 +24,10 @@ for row in open(csvpath):
     sum_pf += row[1]
     print(f"Total: ${sum_pf}")
 
+# find the average
 
+
+# find the max
+
+
+# find the min
