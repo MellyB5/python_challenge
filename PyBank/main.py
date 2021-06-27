@@ -4,43 +4,34 @@ import csv
 csvpath = os.path.join("Resources", "budget_data.csv")
 num_rows = 0
 net_total = 0
+pf = []
+
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     
-    
-    # print(row)
     header = next(csvreader)
     first_row = next(csvreader)
     num_rows += 1
     net_total += int(first_row[1])
+    
     for row in csvreader:
         num_rows += 1
         net_total += int(row[1])
 
-    print(num_rows)
-    print(net_total)
+    print(f"Total months: {num_rows}")
+    print(f"Total: ${net_total}")
 
-        
-    # count the number of rows
-    # num_rows = 0
-
-    # for row in open(csvpath):
-    #     num_rows += 1
-    # print(f"Total months: {num_rows}")
-
-    # total_net = 0
     # for row in csvreader:
-    #     total_net += int(row[1])
-    # print(total_net)
-
-#find the sum of p/f
-    # pf = []
-    # for row in open(csvpath):
-    #     pf.append(row[1])
+    #     pf.append(int(row[1])-int(row[1]-1)
     # print(pf)
-# total = sum(pf)
-# print("Total $", total)
 
+    # lines = csvreader.readlines()
+    # output = [0]
+    # header = lines[0]
+    # data = [int(number)] for number in lines[1:]]
+    # for index, number in enumerate(data[1:],1):
+    #     output.append(number-data[index-1])
+    # print(output)
 
 
 
