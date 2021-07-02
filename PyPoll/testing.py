@@ -27,5 +27,6 @@ with open(csvpath) as csvfile:
         elif str(row[2]) == "O'Tooley":
             OTooley += 1
     
+    print(Khan)
     total_votes = Khan + Correy + Li + OTooley
     print(total_votes)
