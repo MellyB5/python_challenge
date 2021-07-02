@@ -15,5 +15,8 @@ with open(csvpath) as csvfile:
     for row in csvreader:
         num_rows += 1
     
+    print("Election Results")
+    print("----------------------------")
     print(f"Total votes: {num_rows}")
+    print("----------------------------")
     
