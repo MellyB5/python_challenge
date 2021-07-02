@@ -24,3 +24,4 @@ with open(csvpath) as csvfile:
     increase = max(data_list)
     decrease = min(data_list)
     print(f"Greatest Increase in Profits: ")
+    print(f"Greatest Decrease in Profits: ")
