@@ -10,18 +10,19 @@ with open(csvpath) as csvfile:
     csv_header = next(csvfile)
     next_row = next(csvfile)
 
-    last = 867844
+    last = 867884
 
     for row in csvreader:
         data = int(row[1]) - last
         data_list.append(data)
-        last = data
+        last = int(row[1])
     print(data_list)
 
     ave = sum(data_list)/len(data_list)
-    print(f"Average Change: ${ave}")
+    round_ave = round(ave, 2)
+    print(f"Average Change: ${round_ave}")
 
     increase = max(data_list)
     decrease = min(data_list)
-    print(f"Greatest Increase in Profits: ")
-    print(f"Greatest Decrease in Profits: ")
+    print(f"Greatest Increase in Profits: (${increase})")
+    print(f"Greatest Decrease in Profits: (${decrease})")
