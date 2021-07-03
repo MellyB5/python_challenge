@@ -32,7 +32,7 @@ with open(csvpath) as csvfile:
     ret += f"\nTotal votes: {total:,.0f}"
     ret += "\n----------------------------"
     
-# loop through dictionary and retrieve info
+# loop through dictionary and retrieve info for vote counts
     for name, votes in candidates.items():
         ret += f"\n{name}: {(votes/total)*100:.3f}% ({votes:,.0f})"
     ret += "\n----------------------------"
