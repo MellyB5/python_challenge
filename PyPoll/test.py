@@ -18,11 +18,17 @@ with open(csvpath) as csvfile:
     header = next(csvreader)
     # first_row = next(csvreader)
     # num_rows += 1
+    candididates2 = {}
 
     for row in csvreader:
         if row[2] not in candididates:
             candididates[row[2]] = 0
         candididates[row[2]] +=1
+        if row[2] not in candididates2:
+            candididates2[row[2]] = {}
+        if row[1] not in candididates2[row[2]]:
+            candididates2[row[2]][row[1]] = 0
+        candididates2[row[2]][row[1]] +=1
         # num_rows += 1
         # if str(row[2]) == "Khan":
         #     Khan += 1
@@ -34,6 +40,7 @@ with open(csvpath) as csvfile:
         #     OTooley += 1
     
     print(candididates)
+    print(candididates2)
     total = sum(candididates.values())
     print(total)
     ret = "Election Results"
@@ -41,9 +48,7 @@ with open(csvpath) as csvfile:
     ret += f"\nTotal votes: {total:,.0f}"
     ret += "\n----------------------------"
     for name, votes in candididates.items():
-        ret += f"\n{name}: {(votes/total)*100:.3f}% ({votes:,.0f})"
-    ret += "\n----------------------------"
-    ret += "\nWinner: Khan"
+        ret += f"\n{name}: {(votes/total)*100:.2f}% ({votes:,.0f})"
     ret += "\n----------------------------"
     print(ret)
 
