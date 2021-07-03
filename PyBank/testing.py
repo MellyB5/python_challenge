@@ -17,7 +17,6 @@ with open(csvpath) as csvfile:
     last = 0
     count = 0
     total = 0
-    # months = []
     max_increase = -99999999
     max_decrease = 99999999
     total_change = 0
